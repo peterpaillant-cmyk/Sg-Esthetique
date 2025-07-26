@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SG Esthétique - Espace Esthéticienne</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ff4d88;
+            margin-bottom: 1.5rem;
+        }
+        .dashboard-section {
+            background-color: #111;
+            padding: 1rem 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+        }
+        .dashboard-section h2 {
+            color: #ff69b4;
+            margin-bottom: 1rem;
+        }
+        .dashboard-section p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        button {
+            background-color: #ff4d88;
+            border: none;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 0.5rem;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .photo-preview {
+            max-width: 200px;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ff4d88;
+        }
+    </style>
+</head>
+<body>
+    <h1>Espace Esthéticienne - Gestion complète du site</h1>
+
+    <div class="dashboard-section" id="tarifs-section">
+        <h2>Gestion des Tarifs</h2>
+        <form id="tarifs-form">
+            <label for="tarif-cils-classique">Cils Classique (Pose)</label>
+            <input type="number" id="tarif-cils-classique" name="tarif-cils-classique" min="0" step="0.01" />
+
+            <label for="tarif-cils-classique-remplissage">Cils Classique (Remplissage 15 jours)</label>
+            <input type="number" id="tarif-cils-classique-remplissage" name="tarif-cils-classique-remplissage" min="0" step="0.01" />
+
+            <label for="tarif-volume-bresilien">Volume Brésilien (Pose)</label>
+            <input type="number" id="tarif-volume-bresilien" name="tarif-volume-bresilien" min="0" step="0.01" />
+
+            <label for="tarif-volume-bresilien-remplissage">Volume Brésilien (Remplissage 15 jours)</label>
+            <input type="number" id="tarif-volume-bresilien-remplissage" name="tarif-volume-bresilien-remplissage" min="0" step="0.01" />
+
+            <label for="tarif-volume-egyptien">Volume Égyptien (Pose)</label>
+            <input type="number" id="tarif-volume-egyptien" name="tarif-volume-egyptien" min="0" step="0.01" />
+
+            <label for="tarif-volume-egyptien-remplissage">Volume Égyptien (Remplissage 15 jours)</label>
+            <input type="number" id="tarif-volume-egyptien-remplissage" name="tarif-volume-egyptien-remplissage" min="0" step="0.01" />
+
+            <label for="tarif-mega-volume-bresilien">Mega Volume Brésilien (Pose)</label>
+            <input type="number" id="tarif-mega-volume-bresilien" name="tarif-mega-volume-bresilien" min="0" step="0.01" />
+
+            <label for="tarif-mega-volume-bresilien-remplissage">Mega Volume Brésilien (Remplissage 15 jours)</label>
+            <input type="number" id="tarif-mega-volume-bresilien-remplissage" name="tarif-mega-volume-bresilien-remplissage" min="0" step="0.01" />
+
+            <label for="tarif-cils-6d-pose">Cils 6D (Pose)</label>
+            <input type="number" id="tarif-cils-6d-pose" name="tarif-cils-6d-pose" min="0" step="0.01" />
+
+            <label for="tarif-cils-6d-remplissage">Cils 6D (Remplissage 15 jours)</label>
+            <input type="number" id="tarif-cils-6d-remplissage" name="tarif-cils-6d-remplissage" min="0" step="0.01" />
+
+            <label for="tarif-microblading">Microblading</label>
+            <input type="number" id="tarif-microblading" name="tarif-microblading" min="0" step="0.01" />
+
+            <label for="tarif-design-simple">Design simple</label>
+            <input type="number" id="tarif-design-simple" name="tarif-design-simple" min="0" step="0.01" />
+
+            <label for="tarif-design-henne">Design + henné</label>
+            <input type="number" id="tarif-design-henne" name="tarif-design-henne" min="0" step="0.01" />
+
+            <label for="tarif-aisselles">Épilation Aisselles</label>
+            <input type="number" id="tarif-aisselles" name="tarif-aisselles" min="0" step="0.01" />
+
+            <label for="tarif-demi-jambe">Épilation Demi-jambe</label>
+            <input type="number" id="tarif-demi-jambe" name="tarif-demi-jambe" min="0" step="0.01" />
+
+            <label for="tarif-maillot">Épilation Maillot</label>
+            <input type="number" id="tarif-maillot" name="tarif-maillot" min="0" step="0.01" />
+
+            <label for="tarif-maillot-integral">Épilation Maillot intégral</label>
+            <input type="number" id="tarif-maillot-integral" name="tarif-maillot-integral" min="0" step="0.01" />
+
+            <button type="submit">Enregistrer les tarifs</button>
+        </form>
+    </div>
+
+    <div class="dashboard-section" id="promo-section">
+        <h2>Promotions</h2>
+        <form id="promo-form">
+            <label for="promo-text">Texte de la promotion</label>
+            <textarea id="promo-text" name="promo-text" rows="3"></textarea>
+            <button type="submit">Publier la promo</button>
+        </form>
+        <div id="promo-display" style="margin-top:1rem; color:#ff69b4; font-weight:600;"></div>
+    </div>
+
+    <div class="dashboard-section" id="photo-section">
+        <h2>Photos</h2>
+        <label for="photo-upload">Changer la photo d'arrière-plan Accueil</label>
+        <input type="file" id="photo-upload" accept="image/*" />
+        <img id="photo-preview" class="photo-preview" src="" alt="Aperçu de la photo" />
+    </div>
+
+    <div class="dashboard-section" id="contact-section">
+        <h2>Contact</h2>
+        <form id="contact-form">
+            <label for="contact-phone">Téléphone</label>
+            <input type="text" id="contact-phone" name="contact-phone" />
+
+            <label for="contact-instagram">Instagram</label>
+            <input type="text" id="contact-instagram" name="contact-instagram" />
+
+            <label for="contact-email">E-mail</label>
+            <input type="text" id="contact-email" name="contact-email" />
+
+            <label for="contact-deposit-link">Lien pour acompte</label>
+            <input type="text" id="contact-deposit-link" name="contact-deposit-link" />
+
+            <button type="submit">Enregistrer les informations de contact</button>
+        </form>
+    </div>
+
+    <div class="dashboard-section" id="appointments-section">
+        <h2>Demandes de Rendez-vous</h2>
+        <div id="appointments-list">
+            <!-- Appointment requests will be listed here -->
+        </div>
+    </div>
+
+    <div class="dashboard-section" id="calendar-section">
+        <h2>Gestion du Calendrier</h2>
+        <p>Marquer les jours disponibles ou indisponibles.</p>
+        <input type="date" id="calendar-date" />
+        <select id="availability-select">
+            <option value="available">Disponible</option>
+            <option value="unavailable">Indisponible</option>
+        </select>
+        <button id="save-availability-btn">Enregistrer</button>
+        <div id="calendar-status" style="margin-top: 1rem; color: #ff69b4; font-weight: 600;"></div>
+        <div id="availability-list" style="margin-top: 1rem; max-height: 150px; overflow-y: auto; background-color: #222; padding: 0.5rem; border-radius: 5px;"></div>
+    </div>
+
+    <script>
+        // Load saved data from localStorage
+        function loadData() {
+            // Tarifs
+            const tarifs = JSON.parse(localStorage.getItem('tarifs')) || {};
+            for (const key in tarifs) {
+                const input = document.getElementById(key);
+                if (input) {
+                    input.value = tarifs[key];
+                }
+            }
+
+            // Promo
+            const promoText = localStorage.getItem('promoText') || '';
+            document.getElementById('promo-text').value = promoText;
+            document.getElementById('promo-display').textContent = promoText;
+
+            // Photo
+            const photoDataUrl = localStorage.getItem('photoDataUrl') || '';
+            if (photoDataUrl) {
+                document.getElementById('photo-preview').src = photoDataUrl;
+            }
+
+            // Contact
+            const contactInfo = JSON.parse(localStorage.getItem('contactInfo')) || {};
+            for (const key in contactInfo) {
+                const input = document.getElementById(key);
+                if (input) {
+                    input.value = contactInfo[key];
+                }
+            }
+
+            // Appointments
+            const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            renderAppointments(appointments);
+
+            // Calendar availability
+            const availability = JSON.parse(localStorage.getItem('availability')) || {};
+            renderAvailabilityList(availability);
+        }
+
+        // Render appointments list
+        function renderAppointments(appointments) {
+            const list = document.getElementById('appointments-list');
+            list.innerHTML = '';
+            if (appointments.length === 0) {
+                list.textContent = 'Aucune demande de rendez-vous.';
+                return;
+            }
+            appointments.forEach((appt, index) => {
+                const apptDiv = document.createElement('div');
+                apptDiv.style.border = '1px solid #ff4d88';
+                apptDiv.style.padding = '0.5rem';
+                apptDiv.style.marginBottom = '0.5rem';
+                apptDiv.style.borderRadius = '5px';
+
+                const info = document.createElement('p');
+                info.innerHTML = `<strong>${appt.name}</strong> - ${appt.service} - ${appt.date} ${appt.time} - Statut: <em>${appt.status}</em>`;
+                apptDiv.appendChild(info);
+
+                if (appt.status === 'pending') {
+                    const acceptBtn = document.createElement('button');
+                    acceptBtn.textContent = 'Accepter';
+                    acceptBtn.style.marginRight = '0.5rem';
+                    acceptBtn.onclick = () => updateAppointmentStatus(index, 'accepted');
+                    apptDiv.appendChild(acceptBtn);
+
+                    const cancelBtn = document.createElement('button');
+                    cancelBtn.textContent = 'Annuler';
+                    cancelBtn.onclick = () => {
+                        const message = prompt('Message pour le client lors de l\'annulation :', appt.cancelMessage || '');
+                        if (message !== null) {
+                            updateAppointmentStatus(index, 'cancelled', message);
+                        }
+                    };
+                    apptDiv.appendChild(cancelBtn);
+                } else if (appt.status === 'cancelled' && appt.cancelMessage) {
+                    const msg = document.createElement('p');
+                    msg.style.color = '#ff69b4';
+                    msg.textContent = `Message d'annulation : ${appt.cancelMessage}`;
+                    apptDiv.appendChild(msg);
+                }
+
+                list.appendChild(apptDiv);
+            });
+        }
+
+        // Update appointment status
+        function updateAppointmentStatus(index, status, cancelMessage = '') {
+            const appointments = JSON.parse(localStorage.getItem('appointments')) || [];
+            appointments[index].status = status;
+            if (status === 'cancelled') {
+                appointments[index].cancelMessage = cancelMessage;
+            } else {
+                appointments[index].cancelMessage = '';
+            }
+            localStorage.setItem('appointments', JSON.stringify(appointments));
+            renderAppointments(appointments);
+            alert(`Rendez-vous ${status}.`);
+        }
+
+        // Render availability list
+        function renderAvailabilityList(availability) {
+            const listDiv = document.getElementById('availability-list');
+            listDiv.innerHTML = '';
+            const dates = Object.keys(availability).sort();
+            if (dates.length === 0) {
+                listDiv.textContent = 'Aucune disponibilité enregistrée.';
+                return;
+            }
+            dates.forEach(date => {
+                const div = document.createElement('div');
+                div.textContent = `${date} : ${availability[date]}`;
+                listDiv.appendChild(div);
+            });
+        }
+
+        // Save availability
+        document.getElementById('save-availability-btn').addEventListener('click', () => {
+            const date = document.getElementById('calendar-date').value;
+            const status = document.getElementById('availability-select').value;
+            if (!date) {
+                alert('Veuillez sélectionner une date.');
+                return;
+            }
+            const availability = JSON.parse(localStorage.getItem('availability')) || {};
+            availability[date] = status;
+            localStorage.setItem('availability', JSON.stringify(availability));
+            renderAvailabilityList(availability);
+            document.getElementById('calendar-status').textContent = `Disponibilité pour ${date} enregistrée comme ${status}.`;
+        });
+
+        // Load data on page load
+        window.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

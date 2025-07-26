@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SG Esthétique - Prise de Rendez-vous</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ff4d88;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #111;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.6rem;
+            margin-bottom: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #ff4d88;
+            border: none;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        button:hover {
+            background-color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SG Esthétique</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="rdv.html" class="active">RDV</a></li>
+                <li><a href="promo.html">Promo</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="client-account.html">Compte Client</a></li>
+                <li><a href="admin-dashboard.html">Espace Esthéticienne</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Prise de Rendez-vous</h1>
+        <form id="rdv-form">
+            <label for="name">Nom & prénom</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="phone">Numéro de téléphone</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}" />
+
+            <label for="service">Sélection de prestation</label>
+            <select id="service" name="service" required>
+                <option value="">-- Choisissez une prestation --</option>
+                <option value="classique">Cils Classique</option>
+                <option value="volume-bresilien">Volume Brésilien</option>
+                <option value="volume-egyptien">Volume Égyptien</option>
+                <option value="mega-volume-bresilien">Mega Volume Brésilien</option>
+                <option value="cils-6d">Cils 6D</option>
+                <option value="microblading">Microblading</option>
+                <option value="design-simple">Design simple</option>
+                <option value="design-henne">Design + henné</option>
+                <option value="aisselles">Épilation Aisselles</option>
+                <option value="demi-jambe">Épilation Demi-jambe</option>
+                <option value="maillot">Épilation Maillot</option>
+                <option value="maillot-integral">Épilation Maillot intégral</option>
+            </select>
+
+            <label for="date">Date souhaitée</label>
+            <input type="date" id="date" name="date" required min="" />
+
+            <label for="time">Heure souhaitée</label>
+            <input type="time" id="time" name="time" required />
+
+            <button type="submit">Envoyer la demande</button>
+        </form>
+    </main>
+
+    <script>
+        // Set min date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+
+        // Handle form submission (mock)
+        document.getElementById('rdv-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Votre demande de rendez-vous a été envoyée. L\'esthéticienne vous contactera pour confirmation.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SG Esthétique - Compte Client</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Playfair+Display&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+            background-color: #000;
+            color: #eee;
+            font-family: 'Poppins', 'Montserrat', sans-serif;
+            padding: 2rem;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #ff4d88;
+            margin-bottom: 1.5rem;
+        }
+        .notifications {
+            background-color: #111;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+        .notification {
+            border-bottom: 1px solid #ff4d88;
+            padding: 0.5rem 0;
+        }
+        .notification:last-child {
+            border-bottom: none;
+        }
+        .notification p {
+            margin: 0.3rem 0;
+        }
+        .status-confirmed {
+            color: #4caf50;
+            font-weight: 600;
+        }
+        .status-cancelled {
+            color: #f44336;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compte Client - Notifications et Rendez-vous</h1>
+
+    <div class="notifications">
+        <div class="notification">
+            <p><strong>Rendez-vous confirmé :</strong> Votre rendez-vous du 15/07/2024 à 14h00 a été confirmé.</p>
+            <p class="status-confirmed">Statut : Confirmé</p>
+        </div>
+        <div class="notification">
+            <p><strong>Rendez-vous annulé :</strong> Votre rendez-vous du 20/07/2024 à 10h00 a été annulé.</p>
+            <p>Message de l'esthéticienne : Désolée pour ce contretemps, merci de reprogrammer votre rendez-vous.</p>
+            <p class="status-cancelled">Statut : Annulé</p>
+        </div>
+    </div>
+</body>
+</html>
